@@ -1,0 +1,47 @@
+.navbar {
+    background-color: rgba(66, 80, 91, 1);
+}
+
+.navbar-brand {
+    background-color: rgba(92, 111, 125, 1);
+    width: 175px;
+    height: 56px;
+    padding: 0 15px 0 15px;
+}
+
+.navbar-brand img {
+    padding-top: 10px;
+
+}
+
+.navbar-nav a {
+    color: #D7D7D7;
+    /* font-size: 12px; */
+    font-weight: 400;
+    width: 10rem;
+}
+
+.navbar-nav a:hover {
+    color: rgb(236, 134, 67);
+    text-decoration: none;
+}
+
+.navbar-text {
+    width: 10rem;
+}
+
+.navbar-text img {
+    padding-right: 0.5rem;
+}
+
+.navbar-text span {
+    color: white;
+    font-weight: 700;
+}
+
+.v-sep {
+    border-left: 1px solid #D7D7D7;
+    height: 1.5rem;
+    align-self: center;
+}
+
