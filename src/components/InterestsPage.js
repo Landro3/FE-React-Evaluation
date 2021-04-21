@@ -1,4 +1,5 @@
 import React, { /*useState*/ } from 'react';
+import { useSelector } from 'react-redux';
 import InterestBlock from './InterestBlock';
 import {
   Container,
@@ -7,19 +8,8 @@ import {
 } from 'react-bootstrap';
 
 export default function InterestsPage() {
-  let interests = [
-    {
-      id: 1,
-      name: 'Interest 1',
-      type: 'Type 1'
-    },
-    {
-      id: 2,
-      name: 'Interest 2',
-      type: 'Type 2'
-    }
-  ];
-
+  // Map variables to redux store
+  const interests = useSelector(state => state.user.interests);
 
   return (
     <Container>

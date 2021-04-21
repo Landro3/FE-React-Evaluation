@@ -1,4 +1,5 @@
 import React, { /*useState*/ } from 'react';
+import { useSelector } from 'react-redux';
 import SkillBlock from './SkillBlock';
 import {
   Container,
@@ -7,20 +8,9 @@ import {
 } from 'react-bootstrap';
 
 export default function SkillsPage() {
-
-  let skills = [
-    {
-      id: 1,
-      name: 'Skill 1',
-      type: 'Type 1'
-    },
-    {
-      id: 2,
-      name: 'Skill 2',
-      type: 'Type 2'
-    }
-  ];
-
+  // Map variables to redux store
+  const skills = useSelector(state => state.user.skills);
+  
   return (
     <Container>
       <Row>
