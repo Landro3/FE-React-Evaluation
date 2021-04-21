@@ -1,4 +1,6 @@
-import React, { /*useState*/ } from 'react';
+import React, { /*useState, */useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getData } from '../actions/request';
 import InterestBlock from './InterestBlock';
 import SkillBlock from './SkillBlock';
 import {
@@ -8,31 +10,18 @@ import {
 } from 'react-bootstrap';
 
 export default function Home() {
-  let interests = [
-    {
-      id: 1,
-      name: 'Interest 1',
-      type: 'Type 1'
-    },
-    {
-      id: 2,
-      name: 'Interest 2',
-      type: 'Type 2'
-    }
-  ];
+  const dispatch = useDispatch();
 
-  let skills = [
-    {
-      id: 1,
-      name: 'Skill 1',
-      type: 'Type 1'
-    },
-    {
-      id: 2,
-      name: 'Skill 2',
-      type: 'Type 2'
-    }
-  ];
+  // Map variables to redux store
+  const interests = useSelector(state => state.user.interests);
+  const skills = useSelector(state => state.user.skills);
+
+  // Lifecycle method to get data when home page loads
+  useEffect(() => {
+    dispatch(getData());
+  }, [dispatch]);
+
+  
 
   return (
     <Container>
