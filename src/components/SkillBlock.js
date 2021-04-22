@@ -10,8 +10,8 @@ export default function SkillBlock(props) {
   const handleClick = () => history.push(`/Skills/${props.id}`);
 
   return (
-    <Col className="p-4">
-      <button onClick={handleClick}>
+    <Col className="d-flex justify-content-center p-3">
+      <button className="blockButton" onClick={handleClick}>
         <span className="blockTitle">Skill {props.id}</span>
         <div className="d-flex">
           <p className="name">Name: </p>

@@ -10,8 +10,8 @@ export default function InterestBlock(props) {
   const handleClick = () => history.push(`/Interests/${props.id}`);
 
   return (
-    <Col className="p-4">
-      <button onClick={handleClick}>
+    <Col className="d-flex justify-content-center p-3">
+      <button className="blockButton" onClick={handleClick}>
         <span className="blockTitle">Interest {props.id}</span>
         <div className="d-flex">
           <p className="name">Name:</p>

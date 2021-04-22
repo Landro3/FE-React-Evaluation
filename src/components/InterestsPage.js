@@ -15,7 +15,7 @@ export default function InterestsPage() {
     <Container>
       <Row>
         <Col>
-          <h1>Interests</h1>
+          <h1 className="p-4">Interests</h1>
         </Col>
       </Row>
       <Row>

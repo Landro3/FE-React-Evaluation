@@ -1,4 +1,4 @@
-button {
+.blockButton {
     background-color: rgba(244, 249, 253, 1);
     border: 10px solid white;
     box-shadow: 0 0 10px 5px rgb(128, 128, 128, 0.5);
@@ -10,7 +10,7 @@ button {
     text-decoration: none;
 }
 
-button:hover {
+.blockButton:hover {
     border: 7.5px solid rgb(236, 134, 67);
 }
 

@@ -15,7 +15,7 @@ export default function SkillsPage() {
     <Container>
       <Row>
         <Col>
-          <h1>Skills</h1>
+          <h1 className="p-4">Skills</h1>
         </Col>
       </Row>
       <Row>
