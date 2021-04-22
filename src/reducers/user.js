@@ -26,6 +26,12 @@ export default function user(state = initialUserState, action) {
                 skills: action.skills
             };
 
+        case 'SET_USERNAME':
+            return {
+                ...state,
+                userName: action.userName
+            };
+
         default:
             return state;
     }
