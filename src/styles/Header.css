@@ -14,11 +14,26 @@
 
 }
 
-.navbar-nav a {
+.navLink {
     color: #D7D7D7;
     /* font-size: 12px; */
     font-weight: 400;
     width: 10rem;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #D7D7D7;
+}
+
+.homeLink .skillsLink {
+    width: 50px;
+}
+
+.interestsLink {
+    width: 65px;
+}
+
+.active div {
+    border-bottom: 2px solid rgb(236, 134, 67);
 }
 
 .navbar-nav a:hover {
@@ -44,4 +59,3 @@
     height: 1.5rem;
     align-self: center;
 }
-
