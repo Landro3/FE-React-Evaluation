@@ -1,0 +1,30 @@
+button {
+    background-color: rgba(244, 249, 253, 1);
+    border: 10px solid white;
+    box-shadow: 0 0 10px 5px rgb(128, 128, 128, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 220px;
+    width: 355px;
+    text-decoration: none;
+}
+
+button:hover {
+    border: 7.5px solid rgb(236, 134, 67);
+}
+
+.blockTitle {
+    color: rgb(236, 134, 67);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.name, .type {
+    font-weight: 700;
+    padding-left: 1rem;
+    width: 100px;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}

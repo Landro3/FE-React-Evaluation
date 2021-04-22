@@ -1,26 +1,27 @@
 import React, { /*useState*/ } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import {
   Col
 } from 'react-bootstrap';
+import '../styles/Block.css';
 
 export default function SkillBlock(props) {
+  const history = useHistory()
+  const handleClick = () => history.push(`/Skills/${props.id}`);
 
   return (
-    <Col>
-      <Link to={`/Skills/${props.id}`}>
-        <button>
-          Skill {props.id}
-          <div>
-            <span>Name: </span>
-            <span>{props.name}</span>
-          </div>
-          <div>
-            <span>Type: </span>
-            <span>{props.type}</span>
-          </div>
-        </button>  
-      </Link>    
+    <Col className="p-4">
+      <button onClick={handleClick}>
+        <span className="blockTitle">Skill {props.id}</span>
+        <div className="d-flex">
+          <p className="name">Name: </p>
+          <span>{props.name}</span>
+        </div>
+        <div className="d-flex">
+          <p className="type">Type: </p>
+          <span>{props.type}</span>
+        </div>
+      </button>    
     </Col>
   );
 } 

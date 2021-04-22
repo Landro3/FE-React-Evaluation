@@ -8,6 +8,7 @@ import {
   Col,
   Row
 } from 'react-bootstrap';
+import '../styles/Home.css'
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -24,15 +25,15 @@ export default function Home() {
   
 
   return (
-    <Container>
+    <Container className="pt-4">
       <Row>
-        <Col>
-          <h1>Welcome Username</h1>
+        <Col className="d-flex justify-content-start">
+          <span className="welcome">Welcome Username</span>
         </Col>
       </Row>
       <Row>
         <Col>
-          <p>Lorem ipsum</p>
+          <p className="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
         </Col>
       </Row>
       <Row>
