@@ -8,7 +8,7 @@ import {
   Col,
   Row
 } from 'react-bootstrap';
-import '../styles/Home.css'
+import '../styles/Home.css';
 
 export default function Home() {
   const dispatch = useDispatch();
