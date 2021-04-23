@@ -23,7 +23,9 @@ export default function user(state = initialUserState, action) {
             return {
                 ...state,
                 interests: action.interests,
-                skills: action.skills
+                skills: action.skills,
+                interestColors: action.interestColors,
+                skillColors: action.skillColors
             };
 
         case 'SET_USERNAME':
@@ -41,6 +43,8 @@ const initialUserState = {
     userName: '',
     interests: [],
     skills: [],
+    interestColors: {},
+    skillColors: {},
     loading: false,
     error: undefined
 };
