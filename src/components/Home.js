@@ -14,6 +14,7 @@ export default function Home() {
   const dispatch = useDispatch();
 
   // Map variables to redux store
+  const userName = useSelector(state => state.user.userName);
   const interests = useSelector(state => state.user.interests);
   const skills = useSelector(state => state.user.skills);
 
@@ -28,7 +29,7 @@ export default function Home() {
     <Container className="pt-4">
       <Row>
         <Col className="d-flex justify-content-start">
-          <span className="welcome">Welcome Username</span>
+          <span className="welcome">Welcome {userName}</span>
         </Col>
       </Row>
       <Row>
