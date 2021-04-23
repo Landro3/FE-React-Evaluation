@@ -43,7 +43,7 @@ export default function LoginPage() {
                   <Form.Control.Feedback type="invalid">Please enter a username.</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group controlId="password">
-                  <Form.Control required type="text" placeholder="Password" />
+                  <Form.Control required type="password" placeholder="Password" />
                   <Form.Control.Feedback type="invalid">Please enter a password.</Form.Control.Feedback>
                 </Form.Group>
                 <Button className="w-100" type="submit">LOGIN</Button>
