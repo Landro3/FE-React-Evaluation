@@ -41,17 +41,13 @@ export default function Home() {
         {interests.map(interest => 
           <InterestBlock 
             key={interest.id}
-            id={interest.id}
-            name={interest.name}
-            type={interest.type} 
+            interest={interest}
           />
         )}
         {skills.map(skill => 
           <SkillBlock
             key={skill.id}
-            id={skill.id}
-            name={skill.name}
-            type={skill.type}
+            skill={skill}
           />
         )}
       </Row>

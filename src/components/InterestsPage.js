@@ -22,9 +22,7 @@ export default function InterestsPage() {
         {interests.map(interest => 
           <InterestBlock 
             key={interest.id}
-            id={interest.id}
-            name={interest.name}
-            type={interest.type} 
+            interest={interest}
           />
         )}
       </Row>

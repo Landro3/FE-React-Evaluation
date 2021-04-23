@@ -9,25 +9,25 @@ import '../styles/Block.css';
 export default function InterestBlock(props) {
   const interestColors = useSelector(state => state.user.interestColors);
   const history = useHistory()
-  const handleClick = () => history.push(`/Interests/${props.id}`);
+  const handleClick = () => history.push(`/Interests/${props.interest.id}`);
 
   const typeStyle = { 
     color: 'white', 
-    backgroundColor: interestColors[props.type],
+    backgroundColor: interestColors[props.interest.type],
     padding: '0.25rem 0.5rem',
   };
 
   return (
     <Col className="d-flex justify-content-center p-3">
       <button className="blockButton" onClick={handleClick}>
-        <span className="blockTitle">Interest {props.id}</span>
+        <span className="blockTitle">Interest {props.interest.id}</span>
         <div className="d-flex">
           <p className="name">Name:</p>
-          <span>{props.name}</span>
+          <span>{props.interest.name}</span>
         </div>
         <div className="d-flex">
           <p className="type">Type: </p>
-          <span style={typeStyle}>{props.type}</span>
+          <span style={typeStyle}>{props.interest.type}</span>
         </div>
       </button>    
     </Col>

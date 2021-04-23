@@ -9,25 +9,25 @@ import '../styles/Block.css';
 export default function SkillBlock(props) {
   const skillColors = useSelector(state => state.user.skillColors);
   const history = useHistory()
-  const handleClick = () => history.push(`/Skills/${props.id}`);
+  const handleClick = () => history.push(`/Skills/${props.skill.id}`);
 
   const typeStyle = { 
     color: 'white', 
-    backgroundColor: skillColors[props.type],
+    backgroundColor: skillColors[props.skill.type],
     padding: '0.25rem 0.5rem',
   };
 
   return (
     <Col className="d-flex justify-content-center p-3">
       <button className="blockButton" onClick={handleClick}>
-        <span className="blockTitle">Skill {props.id}</span>
+        <span className="blockTitle">Skill {props.skill.id}</span>
         <div className="d-flex">
           <p className="name">Name: </p>
-          <span>{props.name}</span>
+          <span>{props.skill.name}</span>
         </div>
         <div className="d-flex">
           <p className="type">Type: </p>
-          <span style={typeStyle}>{props.type}</span>
+          <span style={typeStyle}>{props.skill.type}</span>
         </div>
       </button>    
     </Col>

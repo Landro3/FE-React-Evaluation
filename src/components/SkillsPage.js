@@ -22,9 +22,7 @@ export default function SkillsPage() {
         {skills.map(skill => 
           <SkillBlock
             key={skill.id}
-            id={skill.id}
-            name={skill.name}
-            type={skill.type}
+            skill={skill}
           />
         )}
       </Row>
