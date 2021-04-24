@@ -20,7 +20,10 @@ export default function InterestBlock(props) {
   return (
     <Col className="d-flex justify-content-center p-3">
       <button className="blockButton" onClick={handleClick}>
-        <span className="blockTitle">Interest {props.interest.id}</span>
+        <span className="blockTitle">
+          Interest {props.interest.id}
+          {props.interest.current ? <i className="blockCurrent">current</i> : null}
+        </span>
         <div className="d-flex">
           <p className="name">Name:</p>
           <span>{props.interest.name}</span>

@@ -23,6 +23,7 @@ export default function InterestPage(props) {
       <Row>
         <Col className="d-flex flex-column align-items-start">
           <span className="interestName">{interest.name}</span>
+          {interest.current ? <i>current</i> : null}
           <span style={typeStyle} className="interestType">{interest.type}</span>
           <span>{interest.detail}</span>
         </Col>

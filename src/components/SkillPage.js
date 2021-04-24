@@ -5,6 +5,7 @@ import {
   Col,
   Row
 } from 'react-bootstrap';
+import moment from 'moment';
 import '../styles/Skill.css';
 
 export default function SkillPage(props) {
@@ -23,6 +24,10 @@ export default function SkillPage(props) {
       <Row>
       <Col className="d-flex flex-column align-items-start">
           <span className="skillName">{skill.name}</span>
+          {skill.DateLearned ? 
+            <i>Date Learned: {moment(skill.DateLearned).format('M/D/YYYY')}</i> 
+            : null
+          }
           <span style={typeStyle} className="skillType">{skill.type}</span>
           <span>{skill.detail}</span>
         </Col>
