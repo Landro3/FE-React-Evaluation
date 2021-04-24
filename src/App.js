@@ -20,6 +20,7 @@ function App() {
   // console.log('test return', fakeInterests);
   // console.log('test return', fakeSkills);
   const username = useSelector(state => state.user.userName);
+  const loading = useSelector(state => state.user.loading);
 
   // Authentication check
   if (username === '' || username === null) {
@@ -34,15 +35,18 @@ function App() {
   // Login will be moved into its own return after authentication is added
   return (
     <div className="App">
-      <Header />
-      <Switch>
-        <Route path="/Home" component={Home} />
-        <Route exact path="/Interests" component={InterestsPage} />
-        <Route path="/Interests/:id" component={InterestPage} />
-        <Route exact path="/Skills" component={SkillsPage} />
-        <Route path="/Skills/:id" component={SkillPage} />
-        <Redirect to="/Home" />
-      </Switch>
+        <div className={loading ? 'loadingContainer' : ''}>
+          <div className={loading ? 'loadingSpinner' : ''} />
+        </div>
+        <Header />
+        <Switch>
+          <Route path="/Home" component={Home} />
+          <Route exact path="/Interests" component={InterestsPage} />
+          <Route path="/Interests/:id" component={InterestPage} />
+          <Route exact path="/Skills" component={SkillsPage} />
+          <Route path="/Skills/:id" component={SkillPage} />
+          <Redirect to="/Home" />
+        </Switch>
     </div>
   );
 }
