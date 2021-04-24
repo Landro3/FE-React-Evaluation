@@ -85,14 +85,8 @@ export const getData = () => {
         });
 
         // load dummy data here
-        setTimeout(
-          () => {
-            dispatch(loadData(fakeInterests, fakeSkills, interestColors, skillColors));
-            dispatch(getRequestSuccess());
-          },
-          2000
-        );
-        
+        dispatch(loadData(fakeInterests, fakeSkills, interestColors, skillColors));
+        dispatch(getRequestSuccess());
 
         // normally a dispatch getRequestError if anything went wrong
       }
